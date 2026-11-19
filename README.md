@@ -6,14 +6,14 @@
 
 将本页地址发给 Agent，并告诉它：
 
-> 请从这个 GitHub 仓库安装 qq-chat-history，注册到我当前使用的 Agent，运行环境预检并告诉我结果。若需要升级或重启 QQ，请先说明影响。
+> 请从 https://github.com/KirkG529/qq-chat-history 安装 qq-chat-history，注册到我当前使用的 Agent，运行环境预检并告诉我结果。若需要升级或重启 QQ，请先说明影响。
 
 ### Agent 安装步骤
 
 1. 使用用户提供的 GitHub **仓库根地址**作为下方 `$repo`。根据当前宿主选择 `claude`、`antigravity`、`cursor` 或 `codex`。如果宿主不明确，询问用户。用 Windows PowerShell 执行：
 
    ~~~powershell
-   $repo = '<用户提供的 GitHub 仓库 HTTPS 地址>'
+   $repo = 'https://github.com/KirkG529/qq-chat-history'
    $harness = 'claude'  # 按实际宿主替换
    $src = Join-Path ([IO.Path]::GetTempPath()) ('qq-skill-' + [guid]::NewGuid().ToString('N'))
    git clone --depth 1 -- $repo $src
