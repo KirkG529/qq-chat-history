@@ -42,3 +42,9 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/register.tests.ps1
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/setup.tests.ps1
 python -B -X utf8 -m unittest discover -s tests -v
 ~~~
+
+## 参考代码仓库
+
+- **QQChatExporter** 提供本 Skill 调用的本地接口，包括好友和群目录、近期会话、消息分页和单会话导出。安装脚本使用 Windows Framework 发布包 v6.4.3。[上游仓库](https://github.com/shuakami/qq-chat-exporter) · [对应版本](https://github.com/shuakami/qq-chat-exporter/releases/tag/v6.4.3)
+- **NapCatQQ** 是上述 Framework 发布包使用的 QQNT 框架。安装时由 QQChatExporter 的发布包提供该组件。[上游仓库](https://github.com/NapNeko/NapCatQQ)
+- **Agent Skills** 定义了技能目录和 `SKILL.md` 的通用格式，本仓库按该格式组织指令和脚本。[规范仓库](https://github.com/agentskills/agentskills)
