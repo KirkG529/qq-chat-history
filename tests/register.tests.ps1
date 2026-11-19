@@ -18,6 +18,7 @@ try {
             $expected = Join-Path (Join-Path $base $folder) 'skills\qq-chat-history'
             $dest = & $register @arguments
             if ($dest -ne $expected -or (& $register @arguments) -ne $expected) { throw "Unexpected registration: $hostName $scope" }
+            if ((Get-FileHash (Join-Path $dest 'LICENSE')).Hash -ne (Get-FileHash (Join-Path $PSScriptRoot '..\LICENSE')).Hash) { throw 'License mismatch' }
             if (!(Test-Path -LiteralPath (Join-Path $dest 'scripts\sessions.py'))) { throw 'Missing script' }
         }
     }

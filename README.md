@@ -48,3 +48,7 @@ python -B -X utf8 -m unittest discover -s tests -v
 - **QQChatExporter** 提供本 Skill 调用的本地接口，包括好友和群目录、近期会话、消息分页和单会话导出。安装脚本使用 Windows Framework 发布包 v6.4.3。[上游仓库](https://github.com/shuakami/qq-chat-exporter) · [对应版本](https://github.com/shuakami/qq-chat-exporter/releases/tag/v6.4.3)
 - **NapCatQQ** 是上述 Framework 发布包使用的 QQNT 框架。安装时由 QQChatExporter 的发布包提供该组件。[上游仓库](https://github.com/NapNeko/NapCatQQ)
 - **Agent Skills** 定义了技能目录和 `SKILL.md` 的通用格式，本仓库按该格式组织指令和脚本。[规范仓库](https://github.com/agentskills/agentskills)
+
+## 许可证
+
+本仓库的 Skill、脚本、测试和文档采用 [MIT License](LICENSE)，版权归 KirkG529（2026）所有。注册脚本会将许可证复制到技能安装目录。已安装旧版的用户可将本仓库的 `LICENSE` 复制到原安装目录。单独安装的 QQChatExporter、NapCatQQ 和腾讯 QQ 适用各自的许可条款。

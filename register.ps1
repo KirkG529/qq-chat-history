@@ -23,7 +23,7 @@ if ($Project) {
 }
 $root = [IO.Path]::GetFullPath((Join-Path $base 'skills'))
 $dest = Join-Path $root 'qq-chat-history'
-$files = @('SKILL.md','register.ps1','setup.ps1','scripts\sessions.py','scripts\query.py',
+$files = @('SKILL.md','LICENSE','register.ps1','setup.ps1','scripts\sessions.py','scripts\query.py',
            'tests\test_queries.py','tests\setup.tests.ps1','tests\register.tests.ps1')
 foreach ($file in $files) {
     $source = Join-Path $PSScriptRoot $file
